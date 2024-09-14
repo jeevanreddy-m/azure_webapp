@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/")
 public class SpringAzureDemoApplication {
 
+	@GetMapping("/")
+	public String message1(){
+		return "Congrats reddy ! your application deployed successfully in Azure Platform. !";
+	}
 	@GetMapping("/message")
 	public String message(){
 		return "Congrats jeevan ! your application deployed successfully in Azure Platform. !";
